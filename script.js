@@ -12,8 +12,8 @@ function getRandom(str) {
 }
 // Write password to the #password input
 function writePassword() {
-  // What is the difference between return and console log? Return gives an output on the page and console log only logs info in the console
-  // What happens if we console log our password instead of returning it? It stores our password in the console instead of actually giving an output
+  // What is the difference between return and console log? Return gives a value from a function, and console log only logs info in the console. Return also stops running our functions.
+  // What happens if we console log our password instead of returning it? It stores our password in the console, return will specifiy the value returned from a function
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
@@ -47,7 +47,7 @@ function generatePassword() {
  if (useLowercase) {
    password2 += getRandom(lowercase)
  }
- //adding the lowercase option to my password if selected by the user, using our getRandom function to determine length and to generate a random #
+ //adding the lowercase option to my password if selected by the user, using our getRandom function to determine length and to generate a random password with the users selections
  if (useUppercase) {
    password2 += getRandom(uppercase)
  }
@@ -63,3 +63,4 @@ function generatePassword() {
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+//Worked on the homework with Shelby, Keith, and Malcolm
